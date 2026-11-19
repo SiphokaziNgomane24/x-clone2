@@ -31,17 +31,29 @@
             <form id="postForm" class="composer">
                 <label class="sr-only" for="draft"> Write a post</label>
                 <textarea id="postInput"
-                 placeholder="What's on your mind?" 
-                 maxlength="280" 
-                  required></textarea>
+                    placeholder="What's on your mind?" 
+                    maxlength="280" 
+                    required></textarea>
                   <div class="composer-foot">
                   <span id="counter">0/280</span>
                 <button class="primary" id="postButton" disabled>Post</button>
                 </div>
             </form>
-        
+                <div id="feed" aria-live="polite"> </div>
             </section>
+
+            <!-- feed -->
+             <section id="exploreView" hidden>
+                <h2>What's Trending</h2>
+                <p>Explore the latest posts from our community.</p>
+                <div id="trends">
+                    <article><small>latest Netflix movie</small><strong>#trending#movie</strong></article>
+                    <article><small>popular YouTube video</small><strong>#trending#video</strong></article>
+                    <article><small>new tech gadget</small><strong>#trending#tech</strong></article>
+                </div>
+             </section>
          </main>
     </div>
+    
 </body>
 </html>
