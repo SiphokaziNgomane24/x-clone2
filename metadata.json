@@ -1,0 +1,5 @@
+{
+  "name": "X-clone",
+  "description": "A lightweight social feed web application with post composer, likes, tabs, explore trends, and dark mode.",
+  "requestFramePermissions": []
+}
