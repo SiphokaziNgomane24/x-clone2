@@ -54,6 +54,25 @@
              </section>
          </main>
     </div>
-    
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+            <button data-view="home">Home</button>
+            <button data-view="explore">Explore</button>
+            <button id="mobileCompose">+ Post</button>
+    </nav>
+        <div class="backdrop" id="backdrop" hidden>
+            <section class="modal" role="dialog" aria-modal="true"
+                aria-labelledby="modalTitle">
+                    <button class="close" id="closeModal" aria-label="Close">×</button>
+                    <h2 id="modalTitle">Write a post</h2>
+                    <label class="sr-only" for="modalDraft">Your post</label>
+                        <textarea id="modalDraft" maxlength="280"
+                            placeholder="What's happening?"></textarea>
+                            <div class="composer-foot">
+<span id="modalCounter">0 / 280</span>
+<button class="primary" id="modalPost" disabled>Post</button>
+        </div>
+            </section>
+                        </div>
+<script src="app.js"></script>
 </body>
 </html>
