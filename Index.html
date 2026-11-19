@@ -7,6 +7,41 @@
     <title>X-clone</title>
 </head>
 <body>
-    
+    <!-- layout  -->
+    <div class="layout">
+        <aside class="sidebar">
+           <a class="home" href="#home">Home</a>
+           <nav aria-label="Main Navigation">
+                <button data-view="home">Home</button>
+                <button data-view="explore">Explore</button>
+                <button data-view="themeToggle">Notifications</button>
+            </nav>
+        <button class="primary" id="openModel">Let's hear your thoughts!</button>
+        </aside>
+
+        <!-- main section -->
+         <main>
+            <header class="topbar"><h1 id="pageTitle"></h1></header>
+                <section id="homeView">
+                    <div class="tabs">
+                        <div class="selected" data-feed="all">For you</div>
+                            <button data-feed="following">Following</button>    
+                    </div>
+
+            <form id="postForm" class="composer">
+                <label class="sr-only" for="draft"> Write a post</label>
+                <textarea id="postInput"
+                 placeholder="What's on your mind?" 
+                 maxlength="280" 
+                  required></textarea>
+                  <div class="composer-foot">
+                  <span id="counter">0/280</span>
+                <button class="primary" id="postButton" disabled>Post</button>
+                </div>
+            </form>
+        
+            </section>
+         </main>
+    </div>
 </body>
 </html>
