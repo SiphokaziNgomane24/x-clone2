@@ -1,0 +1,220 @@
+:root {
+    --bg: #f5f7fb; 
+    --panel: #fff;
+    --ink: #17202c;
+    --muted: #78869a;
+    --line: #e5eaf1; 
+     --blue: #2775f5;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* body styles */
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 15px Arial, sans-serif;
+}
+
+/* buttons and textarea */
+button, textarea {
+    font: inherit;
+}
+button {
+    cursor: pointer;
+}
+
+/* layout */
+.layout {
+    max-width: 1180px;
+    min-height: 100vh;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 210px minmax(0, 700px);
+    gap: 24px;
+    padding: 0 20px;
+}
+
+/* sidebar */
+.sidebar {
+    padding: 25px 8px;
+}
+.brand {
+    display:block;
+    color: var(--blue);
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+.sidebar nav {
+    display:block;
+    gap: 8px;
+}
+.sidebar nav button, .tabs button {
+    border: 0;
+    background: transparent;
+    color: var(--ink);
+    text-align: left;
+    padding:  12px;
+    border-radius: 10px;
+}
+/* main */
+main {
+    background: var(--panel);
+    border-inline: 1px solid var(--line);
+    min-height: 100vh;
+}
+.topbar, .composer, .post {
+    padding:16px 20px;
+    border-bottom: 1px solid var(--line);
+}
+.tabs { 
+    display: flex; 
+    border-bottom: 1px solid var(--line);
+ }
+.tabs button { 
+    flex: 1; 
+    text-align: center; 
+}
+.tabs .selected {
+     color: var(--blue); 
+     font-weight: bold; 
+}
+textarea {
+     width: 100%;
+     min-height: 70px; 
+     resize: vertical;
+     border: 1px solid var(--line);
+     border-radius: 10px; 
+     padding: 12px;
+     background: var(--panel);
+      color: var(--ink);
+     }
+.composer-foot { 
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin-top: 10px; 
+     color: var(--muted);
+     }
+.primary { 
+    border: 0; 
+    border-radius: 20px; 
+    padding: 10px 18px;
+    background: var(--blue); 
+    color: white; 
+    font-weight: bold;
+ }
+.primary:disabled { 
+    opacity: .45; 
+    cursor: not-allowed;
+ }
+.post p { 
+        line-height: 1.55;
+     overflow-wrap: anywhere;
+}
+.post button { 
+    color: var(--muted);
+     border: 0; 
+     background: transparent;
+}
+.post button.liked { 
+    color: #df4a72;
+}
+.trends {
+     display: grid; 
+     grid-template-columns: 1fr 1fr;
+     gap: 10px;
+     padding: 16px; 
+}
+.trends article { 
+    padding: 14px; 
+    border: 1px solid var(--line);
+    border-radius: 12px; }
+.trends small { 
+    display: block; 
+    color: var(--muted); 
+    margin-bottom: 6px; 
+}
+/* MOBLE NAVIGATION */
+.mobile-nav { 
+    display: none; 
+}
+.backdrop { 
+     position: fixed;
+     inset: 0;
+     background: #10182788;
+     display: grid; 
+     place-items: start center; 
+     padding: 8vh 16px; 
+}
+.backdrop[hidden], [hidden] {
+     display: none; 
+}
+.modal { 
+    width: min(540px,100%); 
+    padding: 22px; border-radius: 16px;
+    background: var(--panel);
+ }
+.close { 
+    float: right; 
+    border: 0; 
+    background: transparent;
+    font-size: 26px; 
+    color: var(--muted);
+ }
+.sr-only {
+     position: absolute; 
+     width: 1px; 
+     height: 1px; 
+     padding: 0;
+     margin: -1px; 
+     overflow: hidden;
+      clip: rect(0,0,0,0);
+ }
+body.dark { 
+    --bg: #111722;
+    --panel: #192230;
+    --ink: #edf2f8;
+    --muted: #9aa9bb;
+    --line: #2b394b; 
+    --blue: #5593ff;
+ }
+ /* RESPONSIVE STYLES  */
+@media (max-width: 720px) {
+.layout { 
+    display: block; 
+    padding: 0; 
+}
+.sidebar { 
+    display: none;
+ }
+main { 
+    border: 0;
+}
+.mobile-nav { 
+    display: flex;
+    position: fixed; 
+    inset: auto 0 0;
+    justify-content: space-around; 
+    padding: 8px; 
+    background: var(--panel);
+    border-top: 1px solid var(--line); 
+}
+.mobile-nav button { 
+    border: 0; 
+    padding: 10px;
+    background: transparent; 
+    color: var(--ink); 
+}
+body { 
+    padding-bottom: 60px; 
+}
+.trends { 
+    grid-template-columns: 1fr;
+ }
+}
